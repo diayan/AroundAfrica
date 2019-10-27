@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Around Africa</string>
+    <string name="start">start</string>
+    <string name="dummy_description_text">Touring AFRICA and learning about \n it’s beautiful historical \n destinations just got easier</string>
+    <string name="location">Location</string>
+    <string name="qrcode">QrCode</string>
+    <string name="about">About</string>
+    <string name="dummy_detail_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+    <string name="go">Go</string>
+</resources>

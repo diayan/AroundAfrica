@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="place"
+            type="com.diayan.aroundafrica.data.Places" />
+    </data>
+
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/location_imageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_profile"
+        app:imageUrl="@{place.photo}"
+        app:layout_constraintBottom_toTopOf="@+id/linear_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_container"/>
+
+    <LinearLayout
+        android:id="@+id/linear_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/location_imageView"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/location_name_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{place.location}"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/location_imageView"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/location_description_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{place.description}"
+            android:textColor="@color/color_black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/location_name_textView"
+            app:layout_constraintStart_toStartOf="@+id/location_name_textView"
+            app:layout_constraintTop_toBottomOf="@id/location_name_textView"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>
